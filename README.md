@@ -60,6 +60,7 @@ Choose your operating system below:
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
      ```
    - Follow the on-screen instructions
+   - Once it installs, you'll have to open a new terminal window. You can just do <kbd>⌘</kbd> + <kbd>t</kbd>
 
 2. **Install Git**
    - In Terminal, type:
@@ -89,13 +90,13 @@ After installing Git, you need to introduce yourself. Git uses this information 
 Open your **terminal** (Terminal on macOS/Linux, Command Prompt on Windows) and run:
 
 ```bash
-git config --global user.name "Your Name"
+git config --global user.name "Your Name" # does not have to be your username
 git config --global user.email "your.email@example.com"
 ```
 
 **Example:**
 ```bash
-git config --global user.name "Jane Doe"            # does not have to be your username
+git config --global user.name "Jane Doe"            
 git config --global user.email "jane.doe@gmail.com"
 ```
 
@@ -150,6 +151,7 @@ The easiest way to authenticate is using the **GitHub CLI** (Command Line Interf
    - Follow the prompts:
      - Choose: **GitHub.com**
      - Choose: **HTTPS**
+     - Authenticate with your GitHub credentials
      - Authenticate: **Login with a web browser** (easiest)
      - Copy the code shown, press Enter, and paste it in your browser
      - Sign in to GitHub and authorize
@@ -165,6 +167,15 @@ gh auth status
 ```
 
 You should see a message confirming you're logged in!
+
+```bash
+github.com
+  ✓ Logged in to github.com account ayhsieh (keyring)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: gho_************************************
+  - Token scopes: 'gist', 'read:org', 'repo', 'workflow'
+```
 
 > **What just happened?** You gave Git permission to access your GitHub account securely. Now you can download (clone) repositories and upload (push) your code to GitHub without entering your password every time.
 
@@ -203,6 +214,23 @@ Now that you're all set up, let's download this course to your computer! This is
    ```bash
    cd python-med-crash-course
    ```
+
+### Installing Python
+
+The final step is installing Python on your computer. The easiest way to check if you already have it is by opening your terminal and typing:
+```bash
+python --version
+```
+
+If Python is installed, you should see a message like `Python 3.13.5` (the 2nd and 3rd numbers might be different but that's ok).
+
+If you don't have Python, click on the links below based on your operating system:
+
+[Install Python for Windows](https://realpython.com/installing-python/#windows-how-to-install-python-using-the-official-installer)
+
+[Install Python for MacOS](https://realpython.com/installing-python/#macos-how-to-check-or-get-python)
+
+Once you've finished installing, try the above command again.
 
 **That's it!** You now have all the course materials on your computer. You can open the files, make changes, and start learning.
 
