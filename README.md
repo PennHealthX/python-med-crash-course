@@ -39,63 +39,27 @@ Git allows you to:
 - Undo mistakes and go back to previous versions
 - Collaborate with other developers
 
-Choose your operating system below:
+**macOS users:** macOS might already have Git installed. Open Terminal and type `git --version` to check. If you see a version number, skip to the next section!
 
-<details>
-<summary><b>Windows (WSL/Ubuntu)</b></summary>
+If Git is not installed, install it using Homebrew:
+```bash
+brew install git
+```
 
-Since you installed WSL, Git installation is super easy!
+(If you don't have Homebrew, install it first: [brew.sh](https://brew.sh))
 
-1. **Open Ubuntu**
-   - Search for "Ubuntu" in the Start menu
+**Windows users:** Git installation is super easy in Ubuntu!
 
-2. **Install Git**
-   - Copy and paste this command:
-     ```bash
-     sudo apt install git -y
-     ```
-   - Enter your Ubuntu password when prompted
+Open your Ubuntu terminal and run:
+```bash
+sudo apt install git -y
+```
 
-3. **Verify Installation**
-   - Type: `git --version`
-   - You should see something like `git version 2.x.x`
-
-</details>
-
-<details>
-<summary><b>macOS</b></summary>
-
-**Option 1: Using Homebrew (Recommended)**
-
-1. **Install Homebrew** (if you don't have it)
-   - Open **Terminal** (find it in Applications > Utilities)
-   - Paste this command and press Enter:
-     ```bash
-     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-     ```
-   - Follow the on-screen instructions
-   - Once it installs, you'll have to open a new terminal window. You can just do <kbd>⌘</kbd> + <kbd>t</kbd>
-
-2. **Install Git**
-   - In Terminal, type:
-     ```bash
-     brew install git
-     ```
-
-**Option 2: Using the Git Installer**
-
-1. **Download Git for macOS**
-   - Visit [git-scm.com/download/mac](https://git-scm.com/download/mac)
-   - Download and run the installer
-
-2. **Verify Installation**
-   - Open **Terminal**
-   - Type: `git --version`
-   - You should see something like `git version 2.x.x`
-
-> **Note:** macOS might already have Git installed. Try running `git --version` in Terminal first!
-
-</details>
+**Verify Installation (both platforms):**
+```bash
+git --version
+```
+You should see something like `git version 2.x.x`
 
 ### First-Time Git Setup
 
@@ -120,60 +84,33 @@ git config --global user.email "jane.doe@gmail.com"
 
 Now that Git knows who you are, you need to connect it to your GitHub account so you can download and upload code. GitHub requires authentication for security.
 
-#### Installing GitHub CLI (Recommended Method)
+**Install GitHub CLI:**
 
-The easiest way to authenticate is using the **GitHub CLI** (Command Line Interface):
+**macOS:**
+```bash
+brew install gh
+```
 
-<details>
-<summary><b>Windows (WSL/Ubuntu)</b></summary>
+**Windows (Ubuntu terminal):**
+```bash
+sudo apt install gh -y
+```
 
-1. **Install GitHub CLI in Ubuntu**
-   - Open Ubuntu terminal
-   - Run these commands:
-     ```bash
-     sudo apt install gh -y
-     ```
+**Authenticate with GitHub:**
 
-2. **Authenticate**
-   - In Ubuntu, type:
-     ```bash
-     gh auth login
-     ```
-   - Follow the prompts:
-     - Choose: **GitHub.com**
-     - Choose: **HTTPS**
-     - Authenticate: **Login with a web browser** (easiest)
-     - Copy the code shown, press Enter, and paste it in your browser
-     - Sign in to GitHub and authorize
+Run this command in your terminal:
+```bash
+gh auth login
+```
 
-</details>
+Follow the prompts:
+- Choose: **GitHub.com**
+- Choose: **HTTPS**
+- Authenticate: **Login with a web browser** (easiest)
+- Copy the code shown, press Enter, and paste it in your browser
+- Sign in to GitHub and authorize
 
-<details>
-<summary><b>macOS</b></summary>
-
-1. **Install GitHub CLI**
-   - If you have Homebrew (from earlier):
-     ```bash
-     brew install gh
-     ```
-   - Or download from [cli.github.com](https://cli.github.com)
-
-2. **Authenticate**
-   - In Terminal, type:
-     ```bash
-     gh auth login
-     ```
-   - Follow the prompts:
-     - Choose: **GitHub.com**
-     - Choose: **HTTPS**
-     - Authenticate with your GitHub credentials
-     - Authenticate: **Login with a web browser** (easiest)
-     - Copy the code shown, press Enter, and paste it in your browser
-     - Sign in to GitHub and authorize
-
-</details>
-
-#### Verify Your Connection
+**Verify Your Connection:**
 
 Test that everything is working:
 
@@ -197,13 +134,12 @@ github.com
 ### Troubleshooting
 
 **"git is not recognized" or "command not found"**
-- Restart your terminal/command prompt
-- On Windows, make sure you selected the PATH option during installation
-- Try reinstalling Git
+- Restart your terminal
+- Try reinstalling Git using the commands above
 
 **Still having issues?**
 - Check the [official Git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- Ask for help - everyone struggles with Git at first!
+- Reach out to the course directors - everyone struggles with Git at first!
 
 ---
 
@@ -234,59 +170,35 @@ Now that you're all set up, let's download this course to your computer! This is
 
 The final step is installing Python on your computer.
 
-<details>
-<summary><b>Windows (WSL/Ubuntu)</b></summary>
-
-Ubuntu comes with Python pre-installed, but let's make sure you have the latest version and necessary tools.
-
-1. **Check if Python is installed**
-   - In Ubuntu terminal, type:
-     ```bash
-     python3 --version
-     ```
-   - You should see something like `Python 3.x.x`
-
-2. **Install Python and pip** (if not already installed)
-   ```bash
-   sudo apt update
-   sudo apt install python3 python3-pip python3-venv -y
-   ```
-
-3. **Set up python command**
-   - Ubuntu uses `python3` by default. To use `python` instead:
-     ```bash
-     sudo apt install python-is-python3 -y
-     ```
-
-4. **Verify Installation**
-   ```bash
-   python --version
-   ```
-   You should see something like `Python 3.x.x`
-
-</details>
-
-<details>
-<summary><b>macOS</b></summary>
-
 **Check if Python is already installed:**
 ```bash
 python3 --version
 ```
 
-If you see a version number (like `Python 3.x.x`), you're all set!
-
-If not, install Python using Homebrew:
-
+**macOS users:** If you see a version number (like `Python 3.x.x`), you're all set! If not, install Python using Homebrew:
 ```bash
 brew install python
 ```
 
-> **Note:** On macOS, use `python3` instead of `python` for commands (e.g., `python3 --version`)
+> **Note:** On macOS, use `python3` instead of `python` for commands.
 
-**Detailed instructions:** [Install Python for MacOS](https://realpython.com/installing-python/#macos-how-to-check-or-get-python)
+**Windows users:** Ubuntu comes with Python pre-installed, but let's make sure you have the latest version and necessary tools:
 
-</details>
+```bash
+sudo apt update
+sudo apt install python3 python3-pip python3-venv -y
+```
+
+To use `python` instead of `python3`:
+```bash
+sudo apt install python-is-python3 -y
+```
+
+**Verify Installation (both platforms):**
+```bash
+python --version
+```
+You should see something like `Python 3.x.x`
 
 ---
 
