@@ -14,8 +14,20 @@ To get started, you will need to download this repository to your computer.
 
 ### Creating a GitHub Account
 
-Before installing Git, you'll want to [create a free GitHub account](https://github.com/signup). This allows you to save your own projects online, collaborate with others, and access course materials. 
+Before installing Git, you'll want to [create a free GitHub account](https://github.com/signup). This allows you to save your own projects online, collaborate with others, and access course materials.
 > You should use your personal email, since you will obviously use this account longer after you graduate!
+
+### Setting Up Your Development Environment
+
+For this course, you'll need a Unix-like environment. This is because much of scientific computing, bioinformatics, and research computing happens in these environments.
+
+**Windows users:** You'll need to install WSL (Windows Subsystem for Linux), which gives you a full Linux environment inside Windows. Follow the [WSL Setup Guide](wsl-setup.md) to get started.
+
+**macOS users:** You already have a Unix environment! You'll use the built-in Terminal application:
+- Find Terminal in Applications > Utilities
+- Or press <kbd>⌘</kbd> + <kbd>Space</kbd> and type "Terminal"
+
+---
 
 ### Installing Git
 
@@ -30,19 +42,21 @@ Git allows you to:
 Choose your operating system below:
 
 <details>
-<summary><b>Windows</b></summary>
+<summary><b>Windows (WSL/Ubuntu)</b></summary>
 
-1. **Download Git for Windows**
-   - Visit [git-scm.com/download/win](https://git-scm.com/download/win)
-   - The download should start automatically
+Since you installed WSL, Git installation is super easy!
 
-2. **Run the Installer**
-   - Open the downloaded `.exe` file
-   - Click "Next" through most options (the defaults are fine)
-   - **Important:** When asked about adjusting your PATH environment, select "Git from the command line and also from 3rd-party software"
+1. **Open Ubuntu**
+   - Search for "Ubuntu" in the Start menu
+
+2. **Install Git**
+   - Copy and paste this command:
+     ```bash
+     sudo apt install git -y
+     ```
+   - Enter your Ubuntu password when prompted
 
 3. **Verify Installation**
-   - Open **Command Prompt** (search for `cmd` in the Start menu)
    - Type: `git --version`
    - You should see something like `git version 2.x.x`
 
@@ -87,7 +101,7 @@ Choose your operating system below:
 
 After installing Git, you need to introduce yourself. Git uses this information when you save changes.
 
-Open your **terminal** (Terminal on macOS/Linux, Command Prompt on Windows) and run:
+Open your **terminal** (Terminal on macOS, Ubuntu on Windows) and run:
 
 ```bash
 git config --global user.name "Your Name" # does not have to be your username
@@ -111,16 +125,17 @@ Now that Git knows who you are, you need to connect it to your GitHub account so
 The easiest way to authenticate is using the **GitHub CLI** (Command Line Interface):
 
 <details>
-<summary><b>Windows</b></summary>
+<summary><b>Windows (WSL/Ubuntu)</b></summary>
 
-1. **Download GitHub CLI**
-   - Visit [cli.github.com](https://cli.github.com)
-   - Click "Download for Windows"
-   - Run the installer
+1. **Install GitHub CLI in Ubuntu**
+   - Open Ubuntu terminal
+   - Run these commands:
+     ```bash
+     sudo apt install gh -y
+     ```
 
 2. **Authenticate**
-   - Open **Command Prompt**
-   - Type:
+   - In Ubuntu, type:
      ```bash
      gh auth login
      ```
@@ -217,24 +232,67 @@ Now that you're all set up, let's download this course to your computer! This is
 
 ### Installing Python
 
-The final step is installing Python on your computer. The easiest way to check if you already have it is by opening your terminal and typing:
+The final step is installing Python on your computer.
+
+<details>
+<summary><b>Windows (WSL/Ubuntu)</b></summary>
+
+Ubuntu comes with Python pre-installed, but let's make sure you have the latest version and necessary tools.
+
+1. **Check if Python is installed**
+   - In Ubuntu terminal, type:
+     ```bash
+     python3 --version
+     ```
+   - You should see something like `Python 3.x.x`
+
+2. **Install Python and pip** (if not already installed)
+   ```bash
+   sudo apt update
+   sudo apt install python3 python3-pip python3-venv -y
+   ```
+
+3. **Set up python command**
+   - Ubuntu uses `python3` by default. To use `python` instead:
+     ```bash
+     sudo apt install python-is-python3 -y
+     ```
+
+4. **Verify Installation**
+   ```bash
+   python --version
+   ```
+   You should see something like `Python 3.x.x`
+
+</details>
+
+<details>
+<summary><b>macOS</b></summary>
+
+**Check if Python is already installed:**
 ```bash
-python --version
+python3 --version
 ```
 
-If Python is installed, you should see a message like `Python 3.13.5` (the 2nd and 3rd numbers might be different but that's ok).
+If you see a version number (like `Python 3.x.x`), you're all set!
 
-If you don't have Python, click on the links below based on your operating system:
+If not, install Python using Homebrew:
 
-[Install Python for Windows](https://realpython.com/installing-python/#windows-how-to-install-python-using-the-official-installer)
+```bash
+brew install python
+```
 
-[Install Python for MacOS](https://realpython.com/installing-python/#macos-how-to-check-or-get-python)
+> **Note:** On macOS, use `python3` instead of `python` for commands (e.g., `python3 --version`)
 
-Once you've finished installing, try the above command again.
+**Detailed instructions:** [Install Python for MacOS](https://realpython.com/installing-python/#macos-how-to-check-or-get-python)
 
-**That's it!** You now have all the course materials on your computer. You can open the files, make changes, and start learning.
+</details>
 
-> **Tip:** Whenever the course materials are updated online, you can get the latest version by running `git pull` inside this folder. Don't worry, we'll walk through this process eventually.
+---
+
+**That's it!** You now have all the course materials on your computer and a complete development environment set up. You can open the files, make changes, and start learning Python!
+
+> **Tip:** Whenever the course materials are updated online, you can get the latest version by running `git pull` inside this folder. We'll cover this workflow in class.
 
 ---
 
