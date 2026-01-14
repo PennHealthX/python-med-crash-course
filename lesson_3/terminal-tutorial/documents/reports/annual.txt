@@ -1,0 +1,23 @@
+Annual Research Summary - 2023
+
+Clinical Data Science Lab
+Department of Medicine
+
+Publications: 8 peer-reviewed papers
+- 3 in JAMA Network Open
+- 2 in NEJM AI
+- 3 in Journal of Biomedical Informatics
+
+Active Grants:
+- NIH R01: "AI for Early Sepsis Detection" - $2.1M
+- NSF: "Fairness in Clinical Prediction Models" - $800K
+
+Datasets Curated:
+- ICU vital signs database: 10,000 patient stays
+- Radiology report corpus: 50,000 chest X-rays
+- EHR cohort: 25,000 patients with diabetes
+
+Students Trained:
+- 4 MD/PhD students
+- 6 Master's in Data Science students
+- 12 undergraduate research assistants

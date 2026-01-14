@@ -1,0 +1,6 @@
+patient_id,age,sex,diagnosis,ejection_fraction,readmitted_30d
+PT001,67,M,Heart Failure,35,Yes
+PT002,54,F,Heart Failure,40,No
+PT003,72,M,Heart Failure,28,Yes
+PT004,61,F,Heart Failure,45,No
+PT005,69,M,Heart Failure,32,Yes

@@ -1,0 +1,5 @@
+Welcome to the Medical Data Science Terminal Tutorial!
+
+You're now working in a simulated clinical research environment.
+This folder contains patient data, research notes, and analysis scripts.
+Practice your terminal skills while exploring healthcare data!

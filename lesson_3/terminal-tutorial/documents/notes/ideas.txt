@@ -1,0 +1,17 @@
+Research Project Ideas - Spring 2024
+
+1. Predicting sepsis onset using vital signs time series
+   - Use ICU monitoring data (HR, BP, temp, lactate)
+   - Early warning system for clinical decision support
+
+2. Natural language processing of radiology reports
+   - Extract structured findings from unstructured text
+   - Identify incidental findings for follow-up
+
+3. Analyzing social determinants of health in diabetes outcomes
+   - Link census data with patient outcomes
+   - Identify high-risk communities for intervention
+
+4. Machine learning for drug-drug interaction prediction
+   - Use medication history and adverse event reports
+   - Clinical decision support tool for prescribers

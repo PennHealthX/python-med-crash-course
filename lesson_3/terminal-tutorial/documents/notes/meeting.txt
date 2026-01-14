@@ -1,0 +1,19 @@
+Lab Meeting Notes - January 15, 2024
+
+Attendees: Dr. Chen, Dr. Patel, Research Team
+
+Agenda:
+1. Update on heart failure readmission study data collection
+2. IRB amendment status for expanded cohort
+3. Data quality issues identified in preliminary analysis
+
+Discussion:
+- Successfully collected data from 347 patients (target: 500)
+- Missing values in ~15% of lab results - need imputation strategy
+- Consider adding medication adherence as predictor variable
+- Next steps: Complete data cleaning by end of month
+
+Action Items:
+- Alex: Run preliminary logistic regression baseline model
+- Maria: Contact EMR team about missing lab values
+- Dr. Chen: Review updated consent forms for IRB

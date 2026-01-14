@@ -1,0 +1,11 @@
+Clinical Research Protocol - HF-2024-001
+
+Study Title: Heart Failure Readmission Risk Prediction
+Principal Investigator: Dr. Sarah Chen
+Study Period: January 2024 - December 2024
+
+Objective: Develop a machine learning model to predict 30-day readmission risk
+for patients with heart failure using electronic health record (EHR) data.
+
+Primary Endpoint: 30-day all-cause hospital readmission
+Sample Size: 500 patients
